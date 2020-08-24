@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Homepage</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:graphicImage url="#{resource['images:index.GIF']}" 
+                            alt="Duke waving his hand"/>
+            <h2>Welcome to the Motorcycle shop! </h2>
+            <h2>What would you like to do? </h2>
+            Clisk here to 
+            <h:commandButton id="insert" value="Insert into" 
+                             action="insert" />
+            the database a new motorcycle.
+            <p></p>
+            Click here to
+            <h:commandButton id="search" value="Search through" 
+                             action="search" />
+            the database.
+            <p></p>
+            To
+            <h:selectOneMenu value="#{project5.table}">
+                <f:selectItem itemValue="display" itemLabel="Display all"/>
+
+            </h:selectOneMenu> click 
+            <h:commandButton id="display" value="submit" 
+                             action="response" />.
+        </h:form>
+        <div class="messagecolor">
+            <h:messages showSummary="true" 
+                        showDetail="false"
+                        errorStyle="color: #d20005" 
+                        infoStyle="color: blue"/>
+        </div>
+    </h:body>
+</html>
+

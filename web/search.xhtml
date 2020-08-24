@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+
+        <h:form>
+            <h:graphicImage url="#{resource['images:search.GIF']}" 
+                            alt="Duke waving his hand"/>
+            <p></p>
+            Select a column to search: (either make, model, or all etc.)
+            <h:selectOneMenu value="#{project5.search1}">
+                <f:selectItem itemValue="vin" itemLabel="vin" />
+                <f:selectItem itemValue="make" itemLabel="make" />
+                <f:selectItem itemValue="model" itemLabel="model" />
+                <f:selectItem itemValue="horsepower" itemLabel="horsepower" />
+                <f:selectItem itemValue="color" itemLabel="color" />
+                <f:selectItem itemValue="is it new?" itemLabel="is it new" />
+            </h:selectOneMenu>
+            <p></p>What do you want to find within that column? (Case sensitive)
+            <h:inputText id="search2"
+                         title="My name is: "
+                         value="#{project5.search2}"
+                         required="false"
+                         requiredMessage="Please enter something."
+                         maxlength="25" />
+            <p></p>From the output, limit the output to only this column: (enter * for all).
+            <h:selectOneMenu value="#{project5.search3}">
+                <f:selectItem itemValue="*" itemLabel="*" />
+                <f:selectItem itemValue="vin" itemLabel="vin" />
+                <f:selectItem itemValue="make" itemLabel="make" />
+                <f:selectItem itemValue="model" itemLabel="model" />
+                <f:selectItem itemValue="horsepower" itemLabel="horsepower" />
+                <f:selectItem itemValue="color" itemLabel="color" />
+                <f:selectItem itemValue="is it new?" itemLabel="is it new" />
+            </h:selectOneMenu>
+            <h2>Search the inventory!  Fill out the form and press search!</h2>
+            you are doing a
+            <h:selectOneMenu value="#{project5.table}">
+                <f:selectItem itemValue="search" itemLabel="search"/>
+            </h:selectOneMenu>.
+            <p></p><p></p>
+            <h:commandButton id="search" value="Search" 
+                             action="response" />
+            <h:commandButton id="back" value="Back" action="index" />
+        </h:form>     
+    </body>
+</html>

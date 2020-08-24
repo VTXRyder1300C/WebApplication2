@@ -20,6 +20,9 @@
 ## Open Netbeans and open the project 
 
 ## Click on run and select glassfish as the server to run it on. 
+- If project fails... Clean it and build it again (Previous compiled files may flag an error).
+- To do this, click on the hammer icon to the left of the green "run" arrow.
+- If project still fails, clean it again and click on "debug run," to the right of the "run" arrow.
 
 # How to Contribute to the project:
 
